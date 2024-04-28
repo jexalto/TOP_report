@@ -1,0 +1,78 @@
+\documentclass{layout/tudelft-report}
+
+%% Setting up the bibliography
+\usepackage{biblatex}
+\addbibresource{report.bib}
+
+%% Additional packages
+\usepackage{pdfpages} % Insert .pdf directly as pages
+\usepackage{cmbright}
+\usepackage{todonotes}
+% \usepackage{subcaption}
+% \usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{fontspec}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{cmbright}
+\usepackage[nameinlink,capitalize]{cleveref}
+
+%% Additional commands
+\renewcommand{\deg}{\si{\degree}\xspace}
+\setlength{\headheight}{12.49998pt}
+\newcommand\Chapter[2]{
+  \chapter[#1: {\itshape#2}]{#1\\[2ex]\Large\itshape#2}
+}
+
+%%%%% Begin of document %%%%%
+
+\begin{document}
+
+%% Roman numerals
+\frontmatter
+
+%% Defining the main parameters
+\title{Take-Off Performance Modeling of the E9X}
+\author{Joaquin Exalto}
+\definecolor{title}{HTML}{4884d6} % Color for the title
+
+% \makecover
+
+\input{frontmatter/title}
+
+\tableofcontents
+
+%% List of abbreviations, symbols, figures and tables
+\input{frontmatter/nomenclature}
+
+%% Arabic numerals
+\mainmatter
+
+\input{mainmatter/00_introduction.tex}
+
+\input{mainmatter/01_literature}
+
+\input{mainmatter/02_methods}
+
+\input{mainmatter/03_VV}
+
+\input{mainmatter/04_results}
+
+%% Prevent urls running into margins in bibliography
+\setcounter{biburlnumpenalty}{7000}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{7000}
+
+%% Add bibliography
+\printbibliography[title=References]
+\addcontentsline{toc}{chapter}{References}
+
+%% Using letters for chapters
+
+% \input{appendix/appendix-a}
+
+% \input{appendix/appendix-b}
+
+%\input{appendix/appendix-c} % Create file to add
+
+\end{document}

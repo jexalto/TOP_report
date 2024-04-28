@@ -1,0 +1,57 @@
+\begin{titlepage}
+
+\begin{center}
+
+%% Print the title
+{\makeatletter
+\largetitlestyle\fontsize{45}{45}\selectfont\@title
+\makeatother}
+
+%% Print the subtitle
+{\makeatletter
+\ifdefvoid{\@subtitle}{}{\titlestyle\fontsize{20}{20}\selectfont\@subtitle}
+\makeatother}
+
+\bigskip
+\bigskip
+
+by
+
+\bigskip
+\bigskip
+
+%% Print the name of the author
+{\makeatletter
+\largetitlestyle\fontsize{25}{25}\selectfont\@author
+\makeatother}
+
+
+% \begin{tabular}{lc} \hline \hline \\
+%     Student Number & 4647882 \\
+%     Instructor (TUDelft): & M.F.M. Hoogreef \\
+%     Instructor (UofM): & J.R.R.A. Martins \\
+%     Instructor (UofM): & J.R.R.A. Martins \\
+%     Institution: & Delft University of Technology \\
+%     Place: & Faculty of Aerospace Engineering, Delft \\
+%     Project Duration & September 1, 2021 - January 13, 2023
+% \end{tabular}
+\bigskip
+\bigskip
+
+\begin{tabular}{lll}
+    Participators:      & Joaquin Exalto \\
+                        & Reynard de Vries \\
+                        & Rob Wolleswinkel \\
+    Project duration:   & October 1, 2023 - January 30, 2024 \\
+
+\end{tabular}
+\end{center}
+
+%% Insert the TU Delft logo at the bottom of the page
+% \begin{tikzpicture}[remember picture, overlay]
+%     \node at (current page.south)[anchor=south,inner sep=10pt]{
+%         \includegraphics{layout/tudelft/logo-black}
+%     };
+% \end{tikzpicture}
+
+\end{titlepage}
